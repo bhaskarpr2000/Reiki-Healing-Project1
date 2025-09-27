@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reiki Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gradient-to-b from-white via-slate-50 to-slate-100 text-slate-800">
+  <header class="max-w-5xl mx-auto p-6 lg:p-12">
+    <nav class="flex items-center justify-between">
+      <a href="index.html" class="text-xl font-semibold">Reiki Healing</a>
+      <div class="hidden md:flex gap-6 text-sm">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="practitioner.html">About Me</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <h1 class="text-3xl font-bold mb-6">Services & Pricing</h1>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="p-6 bg-white rounded-xl shadow">
+        <h2 class="text-xl font-semibold mb-2">In-person Reiki Session</h2>
+        <p class="text-slate-600 mb-2">60 minutes of hands-on Reiki healing, tailored to your needs.</p>
+        <p class="font-medium text-slate-800">$70 / session</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow">
+        <h2 class="text-xl font-semibold mb-2">Distance Reiki Session</h2>
+        <p class="text-slate-600 mb-2">Energy healing sent remotely, effective no matter where you are.</p>
+        <p class="font-medium text-slate-800">$60 / session</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow">
+        <h2 class="text-xl font-semibold mb-2">Chakra Balancing</h2>
+        <p class="text-slate-600 mb-2">Focus on aligning and balancing the 7 chakras for overall harmony.</p>
+        <p class="font-medium text-slate-800">$80 / session</p>
+      </div>
+    </div>
+  </main>
+  <footer class="py-10 text-center text-sm text-slate-500">
+    © <span id="year"></span> Reiki Healing
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>

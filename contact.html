@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact & Booking</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gradient-to-b from-white via-slate-50 to-slate-100 text-slate-800">
+  <header class="max-w-5xl mx-auto p-6 lg:p-12">
+    <nav class="flex items-center justify-between">
+      <a href="index.html" class="text-xl font-semibold">Reiki Healing</a>
+      <div class="hidden md:flex gap-6 text-sm">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="practitioner.html">About Me</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <h1 class="text-3xl font-bold mb-6">Contact & Booking</h1>
+    <form class="space-y-4 p-6 rounded-xl bg-white shadow" onsubmit="handleForm(event)">
+      <label class="block">
+        <span class="text-sm text-slate-700">Name</span>
+        <input required name="name" class="mt-1 block w-full rounded-lg border border-slate-200 p-3" placeholder="Your full name" />
+      </label>
+      <label class="block">
+        <span class="text-sm text-slate-700">Email</span>
+        <input required type="email" name="email" class="mt-1 block w-full rounded-lg border border-slate-200 p-3" placeholder="you@example.com" />
+      </label>
+      <label class="block">
+        <span class="text-sm text-slate-700">Message / Preferred time</span>
+        <textarea name="message" rows="4" class="mt-1 block w-full rounded-lg border border-slate-200 p-3" placeholder="Tell me what you'd like support with..."></textarea>
+      </label>
+      <button type="submit" class="px-5 py-3 rounded-xl bg-gradient-to-r from-purple-400 to-blue-400 text-white font-medium">Send</button>
+      <p id="formMsg" class="text-sm text-slate-500 mt-2"></p>
+    </form>
+    <div class="mt-8 text-slate-600">
+      <p><strong>Email:</strong> <a href="mailto:your-email@example.com" class="underline">your-email@example.com</a></p>
+      <p class="mt-2"><strong>Location:</strong> [City, Country]</p>
+      <p class="mt-2"><strong>Availability:</strong> By appointment only</p>
+    </div>
+  </main>
+  <footer class="py-10 text-center text-sm text-slate-500">
+    © <span id="year"></span> Reiki Healing
+  </footer>
+  <script>
+    document.getElementById('year').textContent=new Date().getFullYear();
+    function handleForm(e){
+      e.preventDefault();
+      const f = e.target;
+      const name = f.name.value.trim();
+      const email = f.email.value.trim();
+      const message = f.message.value.trim();
+      const msgEl = document.getElementById('formMsg');
+      if(!name || !email){msgEl.textContent='Please provide a name and email.';msgEl.style.color='#dc2626';return;}
+      const subject = encodeURIComponent('Reiki Booking — ' + name);
+      const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+      window.location.href = `mailto:your-email@example.com?subject=${subject}&body=${body}`;
+      msgEl.textContent='Opening your email client...';msgEl.style.color='#065f46';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Reiki</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gradient-to-b from-white via-slate-50 to-slate-100 text-slate-800">
+  <header class="max-w-5xl mx-auto p-6 lg:p-12">
+    <nav class="flex items-center justify-between">
+      <a href="index.html" class="text-xl font-semibold">Reiki Healing</a>
+      <div class="hidden md:flex gap-6 text-sm">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="practitioner.html">About Me</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <h1 class="text-3xl font-bold mb-6">What is Reiki?</h1>
+    <p class="text-slate-600 mb-4">Reiki is a Japanese technique for relaxation and stress reduction that also promotes healing. It is administered by “laying on hands” and is based on the idea that an unseen life force energy flows through us and is what causes us to be alive.</p>
+    <p class="text-slate-600 mb-4">When one’s life force energy is low, we are more likely to get sick or feel stress, and if it is high, we are more capable of being happy and healthy.</p>
+    <p class="text-slate-600">Reiki works on physical, emotional, mental, and spiritual levels, bringing harmony and balance to the body and mind.</p>
+  </main>
+  <footer class="py-10 text-center text-sm text-slate-500">
+    © <span id="year"></span> Reiki Healing
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>

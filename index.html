@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reiki Healing - Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gradient-to-b from-white via-slate-50 to-slate-100 text-slate-800">
+  <header class="max-w-5xl mx-auto p-6 lg:p-12">
+    <nav class="flex items-center justify-between">
+      <a href="index.html" class="text-xl font-semibold">Reiki Healing</a>
+      <div class="hidden md:flex gap-6 text-sm">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="practitioner.html">About Me</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <main class="max-w-4xl mx-auto px-6 py-16 text-center">
+    <h1 class="text-4xl font-bold mb-6">Welcome to Reiki Healing</h1>
+    <p class="text-slate-600 mb-6">Restore balance, reduce stress, and support your body’s natural healing with Reiki energy.</p>
+    <a href="services.html" class="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-400 to-blue-400 text-white font-medium">View Services</a>
+  </main>
+  <footer class="py-10 text-center text-sm text-slate-500">
+    © <span id="year"></span> Reiki Healing
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
